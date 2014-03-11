@@ -6,8 +6,6 @@ class Url < ActiveRecord::Base
 
 
   def short_url_generator
-    # self.short_url = (Url.count + 1000).to_s(36)
-    # self.short_url = SecureRandom.base36
     self.short_url = "#{self.long_url.hash.abs.to_s(36)}"
   end
 end
