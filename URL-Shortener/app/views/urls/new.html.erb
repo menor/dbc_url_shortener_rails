@@ -2,6 +2,7 @@
   <% session[:errors].each do |error| %>
     <li><%= error.join("-") %></li>
   <% end %>
+  <% session[:errors] = nil %>
 <% end %>
 
 <%= form_for @url do |f| %>
