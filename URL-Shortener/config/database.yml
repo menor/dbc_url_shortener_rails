@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: URL-Shortener_development
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: URL-Shortener_test
