@@ -1,7 +1,7 @@
 <ul>
   <% if @urls %>
     <% @urls.each do |url| %>
-      <li><%= link_to url.short_url, "urls/#{url.id}" %><span><%= url.click_count %></span></li>
+      <li><%= link_to url.short_url, url_path(url) %><span><%= url.click_count %></span></li>
     <% end %>
   <% end %>
 </ul>
