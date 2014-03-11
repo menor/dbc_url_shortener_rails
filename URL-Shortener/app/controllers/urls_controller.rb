@@ -12,6 +12,7 @@ class UrlsController < ApplicationController
     if @url.save
       redirect_to urls_path
     else
+      session[:errors] = @url.errors.messages.values
       render :new
     end
   end

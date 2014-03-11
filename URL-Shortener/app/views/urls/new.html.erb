@@ -1,3 +1,9 @@
+<% if session[:errors] %>
+  <% session[:errors].each do |error| %>
+    <li><%= error.join("-") %></li>
+  <% end %>
+<% end %>
+
 <%= form_for @url do |f| %>
   <li>
     <%= f.label :long_url %>
